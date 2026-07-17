@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5-nangcao</title>
+</head>
+<body>
+
+<h1>Bài 5 - Nâng cao</h1>
+
+<script>
+
+    let n = parseInt(prompt("Nhập số lượng phần tử của mảng:"));
+
+    let mang = [];
+
+    for (let i = 0; i < n; i++) {
+        mang[i] = parseInt(prompt("Nhập phần tử thứ " + (i + 1) + ":"));
+    }
+
+    console.log("Các số nguyên tố trong mảng:");
+
+    let tong = 0;
+
+    function laSoNguyenTo(x) {
+
+        if (x < 2) {
+            return false;
+        }
+
+        for (let i = 2; i <= Math.sqrt(x); i++) {
+
+            if (x % i === 0) {
+                return false;
+            }
+
+        }
+
+        return true;
+    }
+
+    for (let i = 0; i < mang.length; i++) {
+
+        if (laSoNguyenTo(mang[i])) {
+
+            console.log(mang[i]);
+            tong += mang[i];
+
+        }
+
+    }
+
+    console.log("Tổng các số nguyên tố:", tong);
+
+</script>
+
+</body>
+</html>
