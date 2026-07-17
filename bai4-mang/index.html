@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4-mang</title>
+</head>
+<body>
+
+    <h1>Bài 4 - Mảng</h1>
+
+    <script>
+
+        let diemLop = [7, 9, 4, 8, 6, 10, 3, 5];
+
+        // Số lượng học viên
+        console.log("Số lượng học viên:", diemLop.length);
+
+        // Tổng điểm
+        let tong = 0;
+
+        for (let i = 0; i < diemLop.length; i++) {
+            tong += diemLop[i];
+        }
+
+        console.log("Tổng điểm:", tong);
+
+        // Điểm trung bình
+        let trungBinh = tong / diemLop.length;
+        console.log("Điểm trung bình:", trungBinh);
+
+        // Điểm cao nhất và thấp nhất
+        let caoNhat = diemLop[0];
+        let thapNhat = diemLop[0];
+
+        for (let i = 1; i < diemLop.length; i++) {
+
+            if (diemLop[i] > caoNhat) {
+                caoNhat = diemLop[i];
+            }
+
+            if (diemLop[i] < thapNhat) {
+                thapNhat = diemLop[i];
+            }
+
+        }
+
+        console.log("Điểm cao nhất:", caoNhat);
+        console.log("Điểm thấp nhất:", thapNhat);
+
+        // Số học viên đạt
+        let dat = 0;
+
+        for (let i = 0; i < diemLop.length; i++) {
+
+            if (diemLop[i] >= 5) {
+                dat++;
+            }
+
+        }
+
+        console.log("Số học viên đạt:", dat);
+
+    </script>
+
+</body>
+</html>
